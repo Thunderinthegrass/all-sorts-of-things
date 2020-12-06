@@ -1,0 +1,34 @@
+// @import '../../node_modules/slick-carousel/slick/slick';
+// @import '../../node_modules/magnific-popup/dist/magnific-popup';
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+@import "animation";
+@import "abramyans";
+
+.header__menu{
+  padding: 30px;
+  padding-top: 0;
+}
+.header__menu-link{
+  color: #ffffff;
+  background: rgb(1, 255, 251);
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  line-height: 30px;
+}
+.letter-alphabet__title{
+  display: inline-block;
+  width: 30px;
+  padding-bottom: 2px;
+  background: rgb(85, 230, 114);
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0 5px;
+}
+
+@import "media";
