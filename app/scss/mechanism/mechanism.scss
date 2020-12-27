@@ -1,0 +1,127 @@
+.gear-wrapper{
+  width: 600px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.gear{
+  width: 300px;
+  position: absolute;
+}
+.gear-1{
+  width: 500px;
+  animation: gear-1 8s linear infinite;
+  .cls-11 {
+    fill: #0ad3e8;
+  }
+  .cls-2 {
+    fill: none;
+  }
+  .cls-2,
+  .cls-3 {
+    stroke: #871212;
+    stroke-miterlimit: 10;
+  }
+  .cls-3 {
+    fill: #222323;
+  }
+}
+@keyframes gear-1 {
+  0%{
+      
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.gear-2{
+  width: 430px;
+  animation: gear-2 8s linear infinite;
+  left: 468px;
+  top: 53px;
+  transform: rotate(8deg);
+  .cls-1 {
+    fill: #14efc5;
+  }
+  .cls-2 {
+    fill: none;
+  }
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke: #871212;
+    stroke-miterlimit: 10;
+  }
+  .cls-3 {
+    fill: #222323;
+  }
+  .cls-4 {
+    fill: #233330;
+  }
+}
+@keyframes gear-2 {
+  0%{
+
+  }
+  100%{
+      transform: rotate(-352deg);
+  }
+}
+
+///walking-gear-----------------------------------
+
+.walking-gear__wrapper{
+  position: absolute;
+  left: 950px;
+  top: 80px;
+}
+.walking-gear{
+  width: 221px;
+  animation: walking-gear 3s linear infinite;
+}
+@keyframes walking-gear {
+  0%{
+  }
+  90%{
+    transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(22.5deg);
+  }
+}
+.crossbar{
+  height: 221px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  .cls-1 {
+    fill: #1096e8;
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+}
+.detent{
+  position: absolute;
+  width: 35px;
+  left: -18px;
+  top: 22px;
+  .cls-1 {
+    fill: #07720c;
+    animation: walking-gear 3s linear infinite;
+  }
+
+  .cls-1,
+  .cls-2 {
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-2 {
+    fill: #0a2b0b;
+  }
+}
+.detent-right{
+  left:203px;
+  top: 111px;
+}
