@@ -1,58 +1,99 @@
-body{
-	font-family: "Fira Sans", sans-serif;
+*{
+  box-sizing: border-box;
 }
-.timer{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+body {
+  font-family: "Fira Sans", sans-serif;
 }
-.timer-wrapper{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.timer__item{
-	box-sizing: border-box;
-	text-align: center;
-	line-height: 100px;
-	width: 100px;
-	font-size: 60px;
-	font-weight: bold;
-	color: #fff;
-	background: rgb(240, 110, 175);
-	border-radius: 2px;
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.btn, .stop, .discharge{
-	height: 50px;
-	width: 50px;
-	border-radius: 100%;
-	border: 1px solid #f1abab;
-	border-bottom: 4px solid #f36e6e;
-	background: #fff;
-	color: #f1abab;
-	margin-top: 10px;
-	padding: 0;
+.timer__item-wrapper {
 }
-.btn:hover, .stop:hover, .discharge:hover{
-	border: 1px solid #f07d7d;
-	border-bottom: 4px solid #f36e6e;
-	background: #fff;
-	color: #f07d7d;
-	background: #f5a1a1;
-	color: #f01616;
+.timer__item[type="number"]::-webkit-inner-spin-button,
+.timer__item[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
-.btn:active, .stop:active, .discharge:active{
-	outline: none;
-	border-bottom: 1px solid #f1abab;
-	border-top: 3px solid #f1abab;
+.timer__item {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(240, 110, 175);
+  border-radius: 2px;
+  border: none;
+  outline: none;
 }
-.btn:focus, .stop:focus, .discharge:focus{
-	outline: none;
+.arrows-btn-wrapper{
+  display: flex;
+  flex-direction: column;
 }
-.active{
-	color: #f01616;
-	border-color: #f01616;
-	background: #f5a1a1;
-	box-shadow: 0 0 10px #f01616, 2px 2px 10px #f01616;
+.arrow-btn{
+  height: 20px;
+  width: 100%;
+  background: #00fff2;
+  border-radius: 2px;
+  border: 1px solid #06eee2;
+  text-align: center;
+  svg{
+    height: 20px;
+  }
+}
+.arrow-btn-up{
+  transform: rotate(180deg);
+}
+.timer-start-btn,
+.stop,
+.discharge {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 1px solid #f1abab;
+  border-bottom: 4px solid #f36e6e;
+  background: #fff;
+  color: #f1abab;
+  margin-top: 10px;
+  padding: 0;
+  outline: none;
+}
+.timer-start-btn:hover,
+.stop:hover,
+.discharge:hover {
+  border: 1px solid #f07d7d;
+  border-bottom: 4px solid #f36e6e;
+  background: #fff;
+  color: #f07d7d;
+  background: #f5a1a1;
+  color: #f01616;
+}
+.timer-start-btn:active,
+.stop:active,
+.discharge:active {
+  outline: none;
+  border-bottom: 1px solid #f1abab;
+  border-top: 3px solid #f1abab;
+}
+.timer-start-btn:focus,
+.stop:focus,
+.discharge:focus {
+  outline: none;
+}
+.active {
+  color: #f01616;
+  border-color: #f01616;
+  background: #f5a1a1;
+  box-shadow: 0 0 10px #f01616, 2px 2px 10px #f01616;
 }
