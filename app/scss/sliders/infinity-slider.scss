@@ -1,0 +1,40 @@
+.infinity-slider-wrap{
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+.infinity-slider{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.infinity-slider .img-wrapper{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all ease .7s;
+}
+
+/* img{
+  transition: all ease 1s;
+} */
+.img-wrapper-1{
+  background-image: url(../../img/sliders/infinity-slider/1.jpg);
+}
+.img-wrapper-2{
+  background-image: url(../../img/sliders/infinity-slider/2.jpg);
+}
+.img-wrapper-3{
+  background-image: url(../../img/sliders/infinity-slider/3.jpg);
+}
+.img-wrapper-4{
+  background-image: url(../../img/sliders/infinity-slider/4.jpg);
+}
+.infinity-slider .opacity0{
+  opacity: 0;
+}
