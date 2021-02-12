@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,27 @@
   <link rel="stylesheet" href="../../css/style.min.css">
   <link rel="stylesheet" href="../../css/form/form.min.css">
 </head>
+
 <body>
   <div class="logo">
     <a href="../../index.html">Home</a>
   </div>
-  
+
   <div class="form">
-  
+
     <form action="#" id="form" class="form__body">
       <h3 class="form__title">Отправка данных на почту</h3>
-  
+
       <div class="form__item">
         <label for="formName" class="form__label">Имя*</label>
         <input type="text" id="formName" name="name" class="form__input _req">
       </div>
-  
+
       <div class="form__item">
         <label for="formEmail" class="form__label">E-mail*</label>
         <input type="text" id="formEmail" name="email" class="form__input _req _email">
       </div>
-  
+
       <div class="form__item">
         <div class="form__label">Левша, или правша?</div>
         <div class="options">
@@ -41,12 +43,12 @@
           </div>
         </div>
       </div>
-  
+
       <div class="form__item">
         <label for="formMassage" class="form__label">Сообщение</label>
         <textarea name="massage" id="formMassage" class="form__input"></textarea>
       </div>
-  
+
       <div class="form__item">
         <div class="form__label">Возраст</div>
         <select name="age" class="select">
@@ -55,7 +57,7 @@
           <option value="от 45">Старый</option>
         </select>
       </div>
-  
+
       <div class="form__item">
         <div class="form__label">Прикрепить фото</div>
         <div class="file">
@@ -66,17 +68,18 @@
           <div id="formPreview" class="file__preview"></div>
         </div>
       </div>
-  
+
       <div class="form__item">
         <div class="checkbox">
           <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
           <label for="formAgreement" class="checkbox__label"><span>Даю согласие чайку попить</span></label>
         </div>
       </div>
-  
+
       <button type="submit" class="form__button">Жмяк</button>
     </form>
   </div>
   <script src="../../js/form/form.js"></script>
 </body>
+
 </html>
