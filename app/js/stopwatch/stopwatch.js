@@ -9,7 +9,6 @@ let minutes = document.querySelector('.minutes');
 let hours = document.querySelector('.hours');
 let btn = document.querySelector('.stopwatch-start-btn');
 let stop = document.querySelector('.stop');
-
 //запуск секундомера
 btn.onclick = stopwatch;
 
@@ -26,7 +25,6 @@ function stopwatch() {
     seconds.innerHTML = s;
     minutes.innerHTML = m;
     hours.innerHTML = h;
-
     // подставляем нули, если число меньше 10
     if (ms < 10) {
       milSeconds.innerHTML = '0' + ms;
@@ -40,8 +38,6 @@ function stopwatch() {
     if (h < 10) {
       hours.innerHTML = '0' + h;
     }
-
-
     //бег цифр
     if (ms == 99) {
       ms = -1;
@@ -56,10 +52,8 @@ function stopwatch() {
       h++;
     }
   }, 10);
-
   //остановка секундомера
   stop.onclick = stopwatchStop;
-
   function stopwatchStop() {
     stop.classList.toggle('active');
 
@@ -69,7 +63,6 @@ function stopwatch() {
 
     clearInterval(start);
   }
-
   //сброс секундомера
   let discharge = document.querySelector('.discharge');
 

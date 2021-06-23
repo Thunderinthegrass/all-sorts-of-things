@@ -1,0 +1,87 @@
+// .btn{
+//   width: 100px;
+//   height: 100px;
+//   text-align: center;
+//   display: flex;
+//   align-items: center;
+//   border-radius: 100%;
+//   background: rgb(17, 224, 45);
+//   color: rgb(255, 255, 255);
+//   font-weight: bold;
+//   cursor: pointer;
+// }
+// // gnat-----------
+// .gnat-wrapper{
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .gnat{
+//   height: 30px;
+//   width: 30px;
+//   background: #0ddfee;
+//   border-radius: 100%;
+//   transition: 1s;
+// }
+
+// пример из интернета
+body {
+  margin: 0;
+  background-color: #838668;
+  background-color: rgb(5, 10, 54);
+  // background: rgb(255, 255, 255);
+}
+
+// .l2b-link {
+//   text-decoration: none;
+//   margin-bottom: 20px;
+//   font-size: 20px;
+//   text-transform: uppercase;
+//   color: #ccc;
+// }
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.gw-parts-scene {
+  width: 20vw;
+  height: 80vh;
+  // border: 1px solid rgb(13, 235, 224);
+  overflow: hidden;
+  position: relative;
+  overflow: visible;
+}
+
+.gw-part {
+  background-color: hsl(0, 0%, 100%);
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  transform: translateX(0) translateY(0);
+  transition-timing-function: linear;
+  /* transition-delay: 500ms; */
+}
+
+.gw-part__item {
+  content: "";
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition-timing-function: ease-in;
+}

@@ -1,8 +1,22 @@
 .gear-wrapper {
-  width: 600px;
+  width: 100%;
   height: 100vh;
   position: relative;
   z-index: 1;
+  background: #000000de;
+  position: relative;
+}
+
+.lamp {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: white;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 1000px white;
+          box-shadow: 0 0 1000px white;
 }
 
 .gear {
