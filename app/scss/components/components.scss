@@ -1,0 +1,75 @@
+$dark-color: #4b4b4b;
+$light-color: #808080;
+$third-color: #48f596;
+
+.components{
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  position: relative;
+  .logo{
+    position: absolute;
+  }
+  &__item{
+    border: 1px solid #00fdb1;
+    height: 100vh;
+    padding: 180px;
+  }
+  .product{
+    width: 285px;/*для примера*/
+    border: 1px solid #afaeae;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px;
+    padding-top: 9px;
+    &__image{
+      position: relative;
+      display: block;
+      height: 162px;
+      overflow: hidden;
+    }
+    .image-switch{
+      position: absolute;
+      left: 0;
+      height: 0;
+      z-index: 10;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      &__item{
+        flex-grow: 1;
+        cursor: pointer;
+        &:first-child .image-switch__img{
+          opacity: 1;
+          z-index: -1;
+        }
+        &:hover .image-switch__img{
+          opacity: 1;
+          z-index: -1;
+        }
+      }
+      &__img{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        img{
+          display: block;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
