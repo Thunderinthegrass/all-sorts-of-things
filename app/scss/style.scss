@@ -12,20 +12,24 @@
   padding-top: 0;
 }
 .header__menu-link{
-  color: #ffffff;
-  background: #01fffb;
+  color: #8a8b8b;
+  // background: #01fffb;
   font-size: 20px;
   text-decoration: none;
-  border: 1px solid #ffffff;
+  // border: 2px solid #75787c;
   line-height: 30px;
+  transition: all .2s;
+  &:hover{
+    color: rgb(234, 241, 245);
+  }
 }
 .letter-alphabet__title{
   display: inline-block;
   width: 30px;
   padding-bottom: 2px;
-  background: rgb(85, 230, 114);
+  // background: rgb(85, 230, 114);
   text-align: center;
-  color: #ffffff;
+  color: #9e5fb1;
   font-size: 25px;
   font-weight: bold;
   margin: 20px 0 5px;

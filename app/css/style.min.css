@@ -827,6 +827,13 @@ img.mfp-img {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: #21212C;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -848,27 +855,35 @@ body {
   padding: 0 5px;
 }
 
+.h3 {
+  font-size: 20px;
+}
+
 .header__menu {
   padding: 30px;
   padding-top: 0;
 }
 
 .header__menu-link {
-  color: #ffffff;
-  background: #01fffb;
+  color: #8a8b8b;
   font-size: 20px;
   text-decoration: none;
-  border: 1px solid #ffffff;
   line-height: 30px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.header__menu-link:hover {
+  color: #eaf1f5;
 }
 
 .letter-alphabet__title {
   display: inline-block;
   width: 30px;
   padding-bottom: 2px;
-  background: #55e672;
   text-align: center;
-  color: #ffffff;
+  color: #9e5fb1;
   font-size: 25px;
   font-weight: bold;
   margin: 20px 0 5px;

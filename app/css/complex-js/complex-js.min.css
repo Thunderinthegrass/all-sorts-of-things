@@ -1,0 +1,13 @@
+.this {
+  color: #8a8b8b;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 30px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.this:hover {
+  color: #eaf1f5;
+}

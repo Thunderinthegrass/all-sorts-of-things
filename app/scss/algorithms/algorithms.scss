@@ -1,0 +1,21 @@
+body{
+  padding: 30px;
+  background: #282C34;
+}
+.algorithms{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__menu-link{
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #8AB070;
+    transition: all .2s;
+    &:hover{
+      color: #E06C75;
+    }
+  }
+}
