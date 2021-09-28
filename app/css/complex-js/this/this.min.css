@@ -5,3 +5,10 @@
   margin: 20px 0;
   text-align: center;
 }
+
+.out-1 {
+  width: 100px;
+  height: 100px;
+  background: #f6dbdb;
+  border-radius: 100%;
+}

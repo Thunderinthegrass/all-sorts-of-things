@@ -1,13 +1,29 @@
 .this {
-  color: #8a8b8b;
-  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  color: #1f2121;
+  font-size: 90px;
+  font-weight: bold;
   text-decoration: none;
   line-height: 30px;
-  -webkit-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
+  letter-spacing: 2px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background-color: #f7146d;
 }
 
 .this:hover {
   color: #eaf1f5;
+  background-color: #00dada;
+  -webkit-transform: perspective(400px) rotateY(30deg);
+          transform: perspective(400px) rotateY(30deg);
 }
