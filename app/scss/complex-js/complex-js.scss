@@ -22,7 +22,7 @@
   &:hover{
     color: rgb(234, 241, 245);
     background-color: rgb(0, 218, 218);
-    transform: perspective(400px) rotateY(30deg)
+    transform: perspective(400px) rotateY(30deg);
   }
 }
 .closures{
@@ -33,5 +33,16 @@
     color: #fff;
     // transform: perspective(400px) rotateY(30deg);
     transform: rotateZ(360deg);
+  }
+}
+.async{
+  background: #1a9bed;
+  font-size: 80px;
+  color: #ffffff;
+  transition: all .5s;
+  &:hover{
+    background: #6a10db;
+    border-radius: 50%;
+    transform: perspective(400px) translateZ(100px) rotateX(360deg);
   }
 }
