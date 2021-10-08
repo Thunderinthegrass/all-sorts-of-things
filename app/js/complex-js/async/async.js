@@ -38,6 +38,6 @@ function fireworks() {
   setTimeout(function() {
     setInterval(function() {
       wrapper.firstChild.remove();
-    }, 10000);
+    }, 1000);
   }, 5000)
 }

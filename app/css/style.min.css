@@ -860,6 +860,25 @@ body {
   font-size: 20px;
 }
 
+.back {
+  display: inline-block;
+  height: 50px;
+  background: #01fffb;
+  border: 1px solid #ffffff;
+}
+
+.back a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 42px;
+  padding: 0 5px;
+}
+
 .header__menu {
   padding: 30px;
   padding-top: 0;

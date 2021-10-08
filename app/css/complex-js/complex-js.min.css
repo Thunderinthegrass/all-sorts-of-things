@@ -63,7 +63,52 @@
 
 .async:hover {
   background: #6a10db;
-  border-radius: 50%;
   -webkit-transform: perspective(400px) translateZ(100px) rotateX(360deg);
           transform: perspective(400px) translateZ(100px) rotateX(360deg);
+  z-index: 2;
+}
+
+.promise {
+  position: relative;
+  background: #13e307;
+  font-size: 70px;
+  color: #ffffff;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.promise p {
+  z-index: 1;
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;
+}
+
+.promise::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #f53c0a;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.promise:hover::before {
+  width: 500px;
+  height: 500px;
+}
+
+.promise:hover p {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
