@@ -1,6 +1,6 @@
 .async{
   background: #01031f;
-  background: linear-gradient(#01031f, #01031f, #010534, #030d87, #1252f4);
+  background: linear-gradient(#01031f, #01031f, #010534, #030d87, #202ab0, #69a5f6);
   overflow: hidden;
 }
 .wrapper{
@@ -15,6 +15,7 @@
   margin-left: 50px;
   border-radius: 2px;
   cursor: pointer;
+  z-index: 1;
 }
 .async-title{
   color: #9de047;

@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+}
+
+.rect {
+  height: 100px;
+  width: 100px;
+  background: #33dde0;
+  display: inline-block;
+}

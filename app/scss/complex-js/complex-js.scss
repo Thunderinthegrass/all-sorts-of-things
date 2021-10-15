@@ -1,7 +1,23 @@
+.complex-js-body{
+  background: #fff;
+  position: relative;
+  .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: all .3s;
+    a{
+      color: #000;
+    }
+    &:hover{
+      background: rgba(#000000, 0.3);
+    }
+  }
+}
 .wrapper{
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
+  flex-wrap: wrap;
 }
 .complex-item{
   display: flex;
@@ -26,7 +42,7 @@
   }
 }
 .closures{
-  color: rgb(20, 247, 234);
+  color: #0af6cc;
   background-color: rgb(236, 241, 4);
   &:hover{
     background-color: rgb(65, 247, 20);
@@ -77,3 +93,53 @@
     transform: rotateY(360deg);
   }
 }
+.object-create{
+  background: #0af6cc;
+  font-size: 40px;
+  color: #ffffff;
+  transition: all .5s;
+  &:hover{
+    background: #f00808;
+    color: #fff;
+    z-index: 2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
