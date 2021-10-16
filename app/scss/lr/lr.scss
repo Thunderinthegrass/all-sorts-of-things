@@ -108,6 +108,7 @@ p {
   font-size: 17px;
   border-radius: 3px;
   transition: 0.2s;
+  cursor: pointer;
   &:hover {
     background: rgb(58, 214, 231);
   }
@@ -232,3 +233,32 @@ p {
 .arg-color{
   color: $arg-color;
 }
+.p-9, .p-10{
+    height: 100px;
+    background: #fff;
+    font-size: 80px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 100px;
+    cursor: pointer;
+  }
+  .active-p{
+    animation: p-red 3s linear infinite;
+  }
+  @keyframes p-red {
+    0%{
+      color: #ff0000;
+    }
+    50%{
+      color: #fff;
+    }
+    100%{
+      color: #ff0000;
+    }
+  }
+  .img-wrapper{
+    max-height: 765px;
+    img{
+      width: 100%;
+    }
+  }

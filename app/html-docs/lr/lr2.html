@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторные работы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;800&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="../../css/lr/lr.min.css">
+  <link rel="stylesheet" href="../../css/style.min.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo">
+    <a href="index-lr.html">Back</a>
+  </div>
+  <h1 class="main-title">Лабораторная работа 2</h1>
+  <section class="begin">
+    <div class="container">
+      <h2>Основы работы с DOM в JavaScript</h2>
+
+      <div class="task task-1">
+        <h3>Задание 1</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку должно выдаваться сообщение "Привет!".</p>
+        <button class="btn btn-1">Жмяк</button>
+      </div>
+
+      <div class="task task-2">
+        <h3>Задание 2</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем ввода, содержащим текст "???". При нажатии на кнопку текст в поле ввода должен замениться на "!!!"</p>
+        <button class="btn btn-2">Жмяк</button>
+        <div class="out out-2">???</div>
+      </div>
+
+      <!-- <div class="task task-3">
+        <h3>Задание 3</h3>
+        <p>Сделать веб-страничку, в которой двум переменным пользователь присвоит числовые значения, а затем выведет на экран с поясняющей надписью - произведение этих переменных, потом сумму этих переменных. Например, "Произведение 2 и 3 равно 6. Сумма 2 и 3 равно 5".</p>
+        <input type="text" class="inp inp-3" placeholder="Введите переменную a">
+        <input type="text" class="inp inp-3" placeholder="Введите переменную b">
+        <button class="btn btn-3">Жмяк</button>
+        <div class="out out-3"></div>
+      </div> -->
+
+      <div class="task task-4">
+        <h3>Задание 4</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем ввода, содержащим число. При нажатии на кнопку вывести сообщение с квадратом введённого числа, если число не введено - сообщить "Ошибка ввода!"</p>
+        <input type="text" class="inp inp-4" placeholder="Введите число">
+        <button class="btn btn-4">Жмяк</button>
+        <div class="out out-4"></div>
+      </div>
+
+      <div class="task task-5">
+        <h3>Задание 5</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня" и двумя полями ввода, содержащими произвольный текст. По нажатию на кнопку тексты в полях ввода должны меняться.</p>
+        <input type="text" class="inp inp-5" placeholder="Введите текст">
+        <input type="text" class="inp inp-5" placeholder="Введите текст">
+        <button class="btn btn-5">Жмяк</button>
+      </div>
+      <div class="task task-6">
+        <h3>Задание 6</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня". При каждом нажатии в кнопке должно отображаться сколько раз ее нажали.</p>
+        <button class="btn btn-6">Жмяк</button>
+        <div class="out out-6"></div>
+      </div>
+      <!-- <div class="task task-7">
+        <h3>Задание 7</h3>
+        <p>Сделать страничку, в которой пользователь вводит целое число, если число равно нулю, то должно вывести сообщение "ноль" Пример - введено число 0 - вывод "ноль".</p>
+        <input type="text" class="inp inp-7" placeholder="Введите число">
+        <button class="btn btn-7">Жмяк</button>
+        <div class="out out-7"></div>
+      </div> -->
+      <div class="task task-8">
+        <h3>Задание 8</h3>
+        <p>Создать вэб-страничку с кнопками "Заблокировать" и "Разблокировать" и поле ввода с произвольным тестом. При нажатии на "Заблокировать" должно блокироваться поле для ввода, "Разблокировать" - поле для ввода должно становиться доступным для ввода.</p>
+        <input type="text" class="inp inp-8" placeholder="Введите что-нибудь">
+        <button class="btn btn-8">Заблокировать</button>
+        <button class="btn btn-8">Разблокировать</button>
+      </div>
+      <div class="task task-9">
+        <h3>Задание 9</h3>
+        <p>Создать вэб-страничку с абзацем (тег P), при клике мышкой должно появиться сообщение.</p>
+        <p class="p-9">Нажимать сюда</p>
+      </div>
+      <div class="task task-10">
+        <h3>Задание 10</h3>
+        <p>Так же как и в 9 задаче, сообщение должно появиться при наведении курсора мыши и его убирании в сторону от выделенной области.</p>
+        <p class="p-10">Наведите мышкой</p>
+      </div>
+      <div class="task task-11">
+        <h3>Задание 11</h3>
+        <p>Создать вэб-страничку с выделенной областью, содержащую картинку и кнопку. При нажатию на кнопку картинка должна меняться.</p>
+        <div class="img-wrapper">
+          <img src="img/1.jpg" alt="Закат" class="img-11">
+        </div>
+        <button class="btn btn-11">Жмяк</button>
+      </div>
+      <div class="task task-12">
+        <h3>Задание 12</h3>
+        <p>Создать вэб-страничку с полем ввода, содержащим произвольный текст. При нажатии на поле ввода должно выводится сообщение с текстом поля ввода. (использование this)</p>
+        <input type="text" class="inp inp-12">
+        <div class="out out-12"></div>
+      </div>
+      <div class="task task-13">
+        <h3>Задание 13</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку текст меняется на "Меня больше не нажать" и кнопка должна заблокироваться. (this)</p>
+        <button class="btn btn-13">Жмяк</button>
+      </div>
+      <div class="task task-14">
+        <h3>Задание 14</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем тега SPAN с произвольным текстом. При нажатии на кнопку текст должен стать "жирным" (тег B). (Знание outerHTML,  innerHTML)</p>
+        <button class="btn btn-14">Жмяк</button>
+        <span class="out out-14">Немного текста</span>
+      </div>
+      <div class="task task-15">
+        <h3>Задание 15</h3>
+        <p>Дан HTML код. Поменяйте содержимое абзацев на их порядковый номер в коде (создать кнопку с событием).</p>
+        <h2>Заголовок, не поменяется.</h2>
+        <p>Абзац, поменяется.</p>
+        <p>Абзац, поменяется.</p>
+        <p>Абзац, поменяется.</p>
+
+        код должен стать:
+        <h2>Заголовок, не поменяется.</h2>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <input type="submit" onclick="func()">
+        <button class="btn btn-15">Жмяк</button>
+      </div>
+      <div class="task task-16">
+        <h3>Задание 16</h3>
+        <p>Сделать веб-страничку, в которой пользователь вводит с клавиатуры три числа - длины сторон треугольника. Проверить, может ли такой треугольник существовать. Пример: "Введено 1, 1, 2. Такой треугольник не существует"</p>
+        <input type="text" class="inp inp-16" placeholder="Введите число">
+        <input type="text" class="inp inp-16" placeholder="Введите число">
+        <input type="text" class="inp inp-16" placeholder="Введите число">
+        <button class="btn btn-16">Жмяк</button>
+        <div class="out out-16"></div>
+      </div>
+      <div class="task task-17">
+        <h3>Задание 17</h3>
+        <p>Сделать веб-страничку, в которой пользователь вводит с клавиатуры три числа - углы треугольника. Сообщить вид треугольника. Пример "Введено 60, 160, 60. Ошибка, такого быть не может."</p>
+        <input type="text" class="inp inp-17" placeholder="Введите число">
+        <input type="text" class="inp inp-17" placeholder="Введите число">
+        <input type="text" class="inp inp-17" placeholder="Введите число">
+        <button class="btn btn-17">Жмяк</button>
+        <div class="out out-17"></div>
+      </div>
+      <div class="task task-18">
+        <h3>Задание 18</h3>
+        <p>Сделать веб-страничку, в которой пользователь вводит с клавиатуры одно число - час суток. Скрипт должен вывести ту часть дня, к которому принадлежит этот час. Утро 6-9 часов, день 10-17, вечер 18-22, ночь 23-5 часов. Если число больше  23 - сообщить об ошибке.</p>
+        <input type="text" class="inp inp-18" placeholder="Введите число">
+        <button class="btn btn-18">Жмяк</button>
+        <div class="out out-18"></div>
+      </div>
+      <div class="task task-19">
+        <h3>Задание 19</h3>
+        <p>Сделать веб-страничку, в которой пользователь вводит с клавиатуры одно число - номер месяца. Скрипт должен вывести тот сезон года, к которому принадлежит этот месяц.  Если число больше  12 - сообщить об ошибке.</p>
+        <input type="text" class="inp inp-19" placeholder="Введите число">
+        <button class="btn btn-19">Жмяк</button>
+        <div class="out out-19"></div>
+      </div>
+      <div class="task task-20">
+        <h3>Задание 20</h3>
+        <p>Сделать веб-страничку, которое выводит случайное число из диапазона от 0 до 100.</p>
+        <button class="btn btn-20">Жмяк</button>
+        <div class="out out-20"></div>
+      </div>
+      <div class="task task-21"></div>
+      <div class="task task-22"></div>
+      <div class="task task-23"></div>
+      <div class="task task-24"></div>
+      <div class="task task-25"></div>
+      <div class="task task-26"></div>
+      <div class="task task-27"></div>
+      <div class="task task-28"></div>
+      <div class="task task-29"></div>
+      <div class="task task-30"></div>
+      <div class="task task-31"></div>
+      <div class="task task-32"></div>
+      <div class="task task-33"></div>
+      <div class="task task-34"></div>
+      <div class="task task-35"></div>
+      <div class="task task-36"></div>
+      <div class="task task-37"></div>
+      <div class="task task-38"></div>
+      <div class="task task-39"></div>
+      <div class="task task-40"></div>
+    </div>
+  </section>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="js/libs.min.js"></script> -->
+<script src="../../js/lr/lr-2.js"></script>
+</body>
+
+</html>

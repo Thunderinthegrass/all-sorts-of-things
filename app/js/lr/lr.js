@@ -274,13 +274,118 @@ btn[13].onclick = function () {
   парт не хватает`);
 }
 
+//Task15
 
+//Сделать веб-страничку, в которой пользователь вводит с клавиатуры два числа - коэффициенты линейного уравнения ax+b = 0. Скрип должен сообщить решение. Пример: "Введено 0 и 0. Уравнение имеет бесконечное число корней."
 
+btn[14].onclick = function () {
+  let inp15 = document.querySelectorAll('.inp-15')
+  let a = inp15[0].value;
+  let b = inp15[1].value;
+  a = Number(a);
+  b = Number(b);
+  let out15 = document.querySelector('.out-15');
+  out15.innerHTML = '';
 
+  if (a != 0) {
+    out15.innerHTML += `Введено ${a} и ${b} <br>
+    уравнение имеет одно решение`;
+  }
+  else if ((a == 0) && (b != 0)) {
+    out15.innerHTML += `Введено ${a} и ${b} <br>
+  уравнение имеет бесконечное множество решений`
+}
+  else if ((a == 0) && (b == 0)) {
+    out15.innerHTML += `Введено ${a} и ${b} <br>
+  уравнение не имеет решений`};
+}
 
+//Task15
 
+//Сделать веб-страничку, в которой пользователь вводит с клавиатуры три числа - длины сторон треугольника. Проверить, может ли такой треугольник существовать. Пример: "Введено 1, 1, 2. Такой треугольник не существует"
 
+btn[15].onclick = function () {
+  let inp16 = document.querySelectorAll('.inp-16')
+  let a = inp16[0].value;
+  let b = inp16[1].value;
+  let c = inp16[2].value;
 
+  a = Number(a);
+  b = Number(b);
+  c = Number(c);
+
+  let out16 = document.querySelector('.out-16');
+
+  if ((a + b) > c && (b + c) > a && (c + a) > b) {
+    out16.innerHTML = `Введено ${a}, ${b}, ${c}, такой треугольник может существовать`;
+  }
+  else {
+    out16.innerHTML = `Введено ${a}, ${b}, ${c}, такой треугольник не может существовать`;
+  }
+}
+
+//Task 17
+
+//Сделать веб-страничку, в которой пользователь вводит с клавиатуры три числа - углы треугольника. Сообщить вид треугольника. Пример "Введено 60, 160, 60. Ошибка, такого быть не может."
+
+btn[16].onclick = function () {
+  let inp17 = document.querySelectorAll('.inp-17')
+  let a = inp17[0].value;
+  let b = inp17[1].value;
+  let c = inp17[2].value;
+
+  a = Number(a);
+  b = Number(b);
+  c = Number(c);
+
+  let out17 = document.querySelector('.out-17');
+
+  if ((a + b + c) == 180) {
+    out17.innerHTML = `Введено ${a}, ${b}, ${c}, такой треугольник может существовать`;
+  }
+  else {
+    out17.innerHTML = `Введено ${a}, ${b}, ${c}, такой треугольник не может существовать`;
+  }
+}
+
+//Task 18
+
+//Сделать веб-страничку, в которой пользователь вводит с клавиатуры одно число - час суток. Скрипт должен вывести ту часть дня, к которому принадлежит этот час. Утро 6-9 часов, день 10-17, вечер 18-22, ночь 23-5 часов. Если число больше  23 - сообщить об ошибке.
+
+btn[17].onclick = function () {
+  let inp18 = document.querySelector('.inp-18')
+  let a = inp18.value;
+
+  a = Number(a);
+
+  let out18 = document.querySelector('.out-18');
+
+  if ((a >= 6) && (a <= 9)) {
+    out18.innerHTML = `Утро`;
+  }
+  else if ((a >= 10) && (a <= 17)) {
+    out18.innerHTML = `День`;
+  }
+  else if ((a >= 18) && (a <= 22)) {
+    out18.innerHTML = `Вечер`;
+  }
+  else if ((a == 23) || ((a >= 0) && (a <= 5))) {
+    out18.innerHTML = `Ночь`;
+  }
+  else if (a == 24) {
+    out18.innerHTML = `Ошибка`;
+  }
+}
+
+//Task 19
+
+//Сделать веб-страничку, которое выводит случайное число из диапазона от 0 до 100.
+
+btn[19].onclick = function () {
+  let a = Math.floor(Math.random(1) * 101);
+  let out20 = document.querySelector('.out-20');
+  out20.innerHTML = a;
+}
 
 
 

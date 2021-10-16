@@ -120,6 +120,7 @@ p {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -318,4 +319,51 @@ p {
 
 .arg-color {
   color: #c7ab0a;
+}
+
+.p-9, .p-10 {
+  height: 100px;
+  background: #fff;
+  font-size: 80px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 100px;
+  cursor: pointer;
+}
+
+.active-p {
+  -webkit-animation: p-red 3s linear infinite;
+          animation: p-red 3s linear infinite;
+}
+
+@-webkit-keyframes p-red {
+  0% {
+    color: #ff0000;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@keyframes p-red {
+  0% {
+    color: #ff0000;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.img-wrapper {
+  max-height: 765px;
+}
+
+.img-wrapper img {
+  width: 100%;
 }
