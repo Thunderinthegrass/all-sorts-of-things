@@ -178,6 +178,19 @@ t14();
 // <p>3</p>
 // <input type="submit" onclick="func()">
 
+function t15() {
+  let btn = document.querySelector('.btn-15');
+  let p15 = document.querySelectorAll('.p-15');
+
+  btn.onclick = function() {
+    for (let i = 0; i < p15.length; i++) {
+      p15[i].innerHTML = i + 1;
+    }
+  }
+}
+
+t15();
+
 //16. Дан HTML код. Поменяйте содержимое элементов с классом zzz на их порядковый номер в коде (создайте кнопку).
 
 // <h2 class="zzz">Заголовок с классом zzz.</h2>
@@ -193,6 +206,19 @@ t14();
 // <p class="zzz">4</p>
 // <p>Просто абзац, не поменяется.</p>
 // <input type="submit" onclick="func()">
+
+function t16() {
+  let btn = document.querySelector('.btn-16');
+  let zzz = document.querySelectorAll('.zzz');
+
+  btn.onclick = function() {
+    for (let i = 0; i < zzz.length; i++) {
+      zzz[i].innerHTML = i + 1;
+    }
+  }
+}
+
+t16();
 
 //17. Дан HTML код. Поменяйте содержимое абзацев с классом zzz на их порядковый номер в коде.
 
@@ -210,23 +236,242 @@ t14();
 // <p>Просто абзац, не поменяется.</p>
 // <input type="submit" onclick="func()">
 
+function t17() {
+  let btn = document.querySelector('.btn-17');
+  let task17 = document.querySelector('.task-17');
+  let zzz = task17.querySelectorAll('.zzz');
+
+  btn.onclick = function() {
+    for (let i = 0; i < zzz.length; i++) {
+      zzz[i].innerHTML = i + 1;
+    }
+  }
+}
+
+t17();
+
 //18. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится текущие день, месяц и год в формате 'год-месяц-день'. (вам понадобятся следующие методы объекта Date: getFullYear, getMonth, getDate, getHours, getMinutes, getSeconds.)
+
+function t18() {
+  let btn = document.querySelector('.btn-18');
+  let out = document.querySelector('.out-18');
+
+  btn.onclick = function() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDate();
+    out.innerHTML = `${year}-${month + 1}-${day}`;
+  }
+}
+
+t18();
 
 //19. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится текущий месяц по-русски.
 
+function t19() {
+  let btn = document.querySelector('.btn-19');
+  let out = document.querySelector('.out-19');
+  let months = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь",]
+
+  btn.onclick = function() {
+    let date = new Date();
+    let month = date.getMonth();
+    out.innerHTML = months[month];
+  }
+}
+
+t19();
+
 //20. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - текущее время и дата в формате '12:59:59 31.01.2021'. Для решения этой задачи напишите функцию, которая будет добавлять 0 перед днями и месяцами, которые состоят из одной цифры (из 1.1.2021 сделает 01.01.2021)
+
+function t20() {
+  let btn = document.querySelector('.btn-20');
+  let out = document.querySelector('.out-20');
+
+  btn.onclick = function() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    month = month + 1;
+    let day = date.getDate();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    year = String(year);
+    month = String(month);
+    day = String(day);
+    hour = String(hour);
+    minutes = String(minutes);
+    seconds = String(seconds);
+
+    if (month.length == 1) {
+      month = `0${month}`;
+    }
+    if (day.length == 1) {
+      day = `0${day}`;
+    }
+    if (hour.length == 1) {
+      hour = `0${hour}`;
+    }
+    if (minutes.length == 1) {
+      minutes = `0${minutes}`;
+    }
+    if (seconds.length == 1) {
+      seconds = `0${seconds}`;
+    }
+    out.innerHTML = `${day}-${month}-${year} ${hour}-${minutes}-${seconds}`;
+  }
+}
+
+t20();
 
 //21. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - номер текущего дня недели. (метод getDay)
 
+function t21() {
+  let btn = document.querySelector('.btn-21');
+  let out = document.querySelector('.out-21');
+
+  btn.onclick = function() {
+    let date = new Date();
+    let day = date.getDay();
+    if (day == 0) {
+      day = 7;
+    }
+    out.innerHTML = day;
+  }
+}
+
+t21();
+
 //22. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - Выведите на экран количество часов, прошедшее между 1 марта 1988 года и текущим моментом с помощью Date.parse.
+
+function t22() {
+  let btn = document.querySelector('.btn-22');
+  let out = document.querySelector('.out-22');
+
+  btn.onclick = function() {
+    let z = Date.parse('Mar 1, 1988');
+    out.innerHTML = (z / 60) / 60;
+    }
+  }
+
+t22();
 
 //23. Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - количество секунд, которое осталось до конца дня.
 
+function t23() {
+  let btn = document.querySelector('.btn-23');
+  let out = document.querySelector('.out-23');
+
+  btn.onclick = function() {
+    let date = new Date();
+    let dateNext = new Date(date.getFullYear(), date.getMonth(), date.getDate()+1);
+    let differ = dateNext - date;
+    out.innerHTML = Math.round(differ / 1000);
+    }
+  }
+
+t23();
+
 //24. Создать вэб-страничку с тикающими часами.
+
+function clock() {
+  const hr = document.querySelector('#hr');
+  const mn = document.querySelector('#mn');
+  const sc = document.querySelector('#sc');
+
+  setInterval(()=>{
+    let day = new Date();
+    let hh = day.getHours() * 30;
+    let mm = day.getMinutes() * 6;
+    let ss = day.getSeconds() * 6;
+
+    hr.style.transform = `rotateZ(${hh+(mn/12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;
+  })
+}
+clock();
 
 //25. Создать вэб-страничку со слайдером - циклично меняющимися картинками, не менее трех.
 
+function t25() {
+  let img = document.querySelector('.img-25');
+  let count = 1;
+  setInterval(() => {
+    count++;
+    img.setAttribute('src', `img/${count}.jpg`);
+    if (count == 4) {
+      count = 0;
+    }
+  }, 2000);
+}
+
+t25();
+
 //26. Создать "карусель" картинок - три картинки подряд в одну линию, каждую секунду последовательно меняющиеся местами. (smiley)(sad)(wink) >(sad)(wink)(smiley)>(wink)(smiley)(sad)>(smiley)(sad)(wink)
+
+function t26() {
+  let img1 = document.querySelector('.img-26-1');
+  let img2 = document.querySelector('.img-26-2');
+  let img3 = document.querySelector('.img-26-3');
+  let img4 = document.querySelector('.img-26-4');
+
+    function z1() {
+      let count = 0;
+      setInterval(() => {
+        count++;
+        img1.setAttribute('src', `img/${count}.jpg`);
+        if (count == 4) {
+          count = 0;
+        }
+      }, 1000);
+    }
+    z1();
+    function z2() {
+      let count = 0;
+      setTimeout(() => {
+        setInterval(() => {
+          count++;
+          img2.setAttribute('src', `img/${count}.jpg`);
+          if (count == 4) {
+            count = 0;
+          }
+        }, 1000);
+      }, 1000)
+    }
+    z2();
+    function z3() {
+      let count = 0;
+      setTimeout(() => {
+        setInterval(() => {
+          count++;
+          img3.setAttribute('src', `img/${count}.jpg`);
+          if (count == 4) {
+            count = 0;
+          }
+        }, 1000);
+      }, 2000)
+    }
+    z3();
+    function z4() {
+      let count = 0;
+      setTimeout(() => {
+        setInterval(() => {
+          count++;
+          img4.setAttribute('src', `img/${count}.jpg`);
+          if (count == 4) {
+            count = 0;
+          }
+        }, 1000);
+      }, 3000)
+    }
+    z4();
+  }
+
+
+t26();
 
 //27. Создать вэб-страничку с отсчетом до полуночи сегодняшнего дня. (в произвольной форме)
 

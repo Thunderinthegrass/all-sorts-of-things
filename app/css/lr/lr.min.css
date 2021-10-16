@@ -360,10 +360,139 @@ p {
   }
 }
 
-.img-wrapper {
+.img-wrapper, .img1-wrapper {
   max-height: 765px;
 }
 
-.img-wrapper img {
+.img-wrapper img, .img1-wrapper img {
+  width: 100%;
+}
+
+.code-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 8px solid #38FFFF;
+  border-radius: 50%;
+}
+
+.clock-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #38FFFF;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+
+.hour, .hr {
+  width: 200px;
+  height: 200px;
+}
+
+.min, .mn {
+  width: 230px;
+  height: 230px;
+}
+
+.sec, .sc {
+  width: 250px;
+  height: 250px;
+}
+
+.hr, .mn, .sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100px;
+  background: #E28989;
+}
+
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 110px;
+  background: #E28989;
+}
+
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: #E28989;
+}
+
+.wrapper-26 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper1,
+.wrapper2,
+.wrapper3,
+.wrapper4 {
+  width: 300px;
+  height: 300px;
+}
+
+.wrapper1 img,
+.wrapper2 img,
+.wrapper3 img,
+.wrapper4 img {
   width: 100%;
 }
