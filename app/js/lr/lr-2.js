@@ -475,10 +475,238 @@ t26();
 
 //27. Создать вэб-страничку с отсчетом до полуночи сегодняшнего дня. (в произвольной форме)
 
+function t27() {
+  setInterval(() => {
+    let out = document.querySelector('.out-27');
+    let now = new Date();
+    let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+    let diff = tomorrow - now;
+    let z =  Math.round(diff / 1000);
+    out.innerHTML = z;
+  }, 1000);
+}
+
+t27();
+
 //28. Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку алертом выводился ее src. (elem.onclick)
+
+function t28() {
+  let img = document.querySelectorAll('.img-28')
+  img.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      alert(item.getAttribute('src'));
+      console.log('src');
+    })
+  });
+
+}
+
+t28();
 
 //задачки на На addEventListener, removeEventListener:
 
 //29. Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст.
 
+function t29() {
+  let link = document.querySelectorAll('.link-29')
+  link.forEach((item, i) => {
+    item.addEventListener('mouseover', () => {
+      let href = item.getAttribute('href');
+      item.setAttribute('title', href);
+    })
+  });
+
+}
+
+t29();
+
 //30. Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках
+
+function t30() {
+  let link = document.querySelectorAll('.link-30')
+  link.forEach((item, i) => {
+    item.addEventListener('mouseover', () => {
+      let href = item.getAttribute('href');
+      item.innerHTML += `(${href})`;
+    })
+  });
+
+}
+
+t30();
+
+// 31. Дополните предыдущую задачу: после первого наведению на ссылку следует отвязать от нее событие, которое добавляет href в конец текста
+
+function t31() {
+
+  };
+
+t31();
+
+// 32. Привяжите всем полям ввода следующее событие - по потери фокуса каждое поле ввода выводит свое value в абзац с id="test".
+
+function t32() {
+  let out = document.querySelector('.out-32');
+  let inp = document.querySelectorAll('.inp-32');
+
+  inp.forEach((item, i) => {
+    item.addEventListener('mouseout', () => {
+      out.innerHTML = item.getAttribute('value');
+    })
+  });
+
+};
+
+t32();
+
+// 33. Для всех полей ввода сделайте так, чтобы они выводили свой value сообщением при нажатии на любой из них, но только по первому нажатию. Повторное нажатие на поле ввода не должно вызывать реакции.
+
+function t33() {
+  let out = document.querySelector('.out-33');
+  let inp = document.querySelectorAll('.inp-33');
+
+  inp.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      out.innerHTML = item.getAttribute('value');
+      item.removeAttribute('value');
+    })
+  });
+
+};
+
+t33();
+
+// 34. Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит.
+
+function t34() {
+  let out = document.querySelectorAll('.out-34');
+
+  out.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      let z = item.innerHTML;
+      z = z * z;
+      item.innerHTML = z;
+    })
+  });
+
+};
+
+t34();
+
+// 35. Даны поля ввода (3). Сделайте так, чтобы все поля ввода по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в поле, указывается в атрибуте data-length. Если вбито правильное количество, то граница поля становится зеленой, если неправильное - красной.
+
+function t35() {
+  let inp = document.querySelectorAll('.inp-35');
+
+  inp.forEach((item, i) => {
+    item.addEventListener('mouseout', () => {
+      let z = item.getAttribute('data-length');
+      let v = item.value.length;
+
+      if (z == v) {
+        item.style.border = '3px solid green';
+      }
+      else {
+        item.style.border = '3px solid red';
+      }
+    })
+  });
+
+};
+
+t35();
+
+// 36. Даны несколько тегов DIV. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так далее каждый клик происходит чередование фона. Сделайте так, чтобы было две функции: одна красит в красный цвет, другая в зеленый и они сменяли друг друга через removeEventListener
+
+function t36() {
+  let out = document.querySelectorAll('.out-36');
+
+  out.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      item.classList.add('red');
+      if (item.classList.contains('red') == true) {
+        item.removeEventListener('click', () => {
+          item.classList.add('red');
+        })
+        console.log('z');
+        item.addEventListener('click', () => {
+          item.classList.add('green');
+        })
+      }
+      if (item.classList.contains('green') == true) {
+        item.removeEventListener('click', () => {
+          item.classList.add('green');
+        })
+        console.log('z');
+        item.addEventListener('click', () => {
+          item.classList.add('red');
+        })
+      }
+    })
+});
+
+};
+
+t36();
+
+// задачи с классами:
+
+// Для решения задач данного блока вам понадобятся следующие свойства: classList.
+// 37. Дан элемент #elem. Добавьте ему класс www.
+// 38. Дан элемент #elem. Удалите у него класс www.
+// 39. Дан элемент #elem. Проверьте наличие у него класса www.
+// 40. Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.
+// 41. Дан элемент #elem. Узнайте количество его классов.
+// 42. Дан элемент #elem. Выведите последовательно сообщением его классы.
+
+function t3742() {
+  let elem = document.querySelector('#elem');
+  let out = document.querySelector('.out-37');
+
+  elem.classList.add('www');
+  elem.classList.remove('www');
+  elem.classList.contains('www');
+  if (elem.classList.contains('www')) {
+    elem.classList.remove('www');
+  }
+  else {
+    elem.classList.add('www');
+  }
+  let z = elem.classList.length;
+  for (let i = 0; i < z; i++) {
+    out.innerHTML += elem.classList[i];
+  }
+
+};
+
+t3742();
+
+// задачи на работу с CSS:
+// вам понадобятся следующие свойства: cssText
+// 43. Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText.
+// теперь на tagName:
+// 44. Дан элемент #elem. По клику на него выведите название его тега.
+// 45. Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
+// 46. Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
+// Вставка элементов через appendChild. Для решения задач данного блока вам понадобятся следующие методы: createElement, appendChild.
+// 47. Дан ol. Вставьте ему в конец li с текстом 'пункт'.
+// 48. Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+// Потомки. Для решения задач данного блока вам понадобятся следующие свойства: firstElementChild, lastElementChild, children.
+// 49. Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета.
+// 50. Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.
+// 51. Дан элемент #elem. Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+// Соседи. Для решения задач данного блока вам понадобятся следующие свойства: previousElementSibling, nextElementSibling.
+// 52. Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'.
+// 53. Дан элемент #elem. Найдите его соседа снизу и добавьте ему в конец текст '!'.
+// 54. Дан элемент #elem. Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '!'.
+// Родители. Для решения задач данного блока вам понадобятся следующие свойства: parentElement, parentNode.
+// 55. Дан элемент #elem. Найдите его родителя и покрасьте его в красный цвет.
+// 56. Дан элемент #elem. Найдите родителя его родителя и покрасьте его в красный цвет.
+// метрики windows
+// 57. Дана кнопка. По нажатию на эту кнопку выведите высоту окна браузера.
+// 58. Дана кнопка. По нажатию на эту кнопку прокрутите окно браузера до самого низа.
+// 59. Дана кнопка. По нажатию на эту кнопку узнайте, есть ли у окна браузера вертикальная прокрутка.
+// объект Event
+// 60. Есть поле ввода. ниже расположен текст. при вводе символа в поле ввода он добавляется к тексту
+// 61. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl
+// 62. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'

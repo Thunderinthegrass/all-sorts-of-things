@@ -470,7 +470,8 @@ p {
   background: #E28989;
 }
 
-.wrapper-26 {
+.wrapper-26,
+.wrapper-28 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,4 +496,37 @@ p {
 .wrapper3 img,
 .wrapper4 img {
   width: 100%;
+}
+
+.link-29,
+.link-30,
+.link-31 {
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+.inp-35 {
+  border: 3px solid transparent;
+}
+
+.out-36 {
+  padding: 20px 0;
+}
+
+.red {
+  background: #ff0000;
+}
+
+.green {
+  background: #00ff00;
+}
+
+#elem {
+  color: #fff;
+  background: #1057d1;
 }
