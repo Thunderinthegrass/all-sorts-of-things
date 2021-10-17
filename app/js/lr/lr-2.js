@@ -684,13 +684,78 @@ t3742();
 // задачи на работу с CSS:
 // вам понадобятся следующие свойства: cssText
 // 43. Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText.
+
+function t43() {
+  let out = document.querySelector('.out-43');
+  out.style.cssText = 'background-color: red; width: 30px; height: 30px; border: 3px solid #ffffff';
+};
+
+t43();
+
 // теперь на tagName:
 // 44. Дан элемент #elem. По клику на него выведите название его тега.
+
+function t44() {
+  let out = document.querySelector('.out-44');
+  out.onclick = function() {
+    out.innerHTML = out.tagName;
+  }
+};
+
+t44();
 // 45. Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
+
+function t45() {
+  let out = document.querySelector('.out-45');
+  out.onclick = function() {
+    out.innerHTML = out.tagName.toLowerCase();
+  }
+};
+
+t45();
+
 // 46. Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
+
+function t46() {
+  let www = document.querySelectorAll('.www46');
+  www.forEach((item, i) => {
+      item.innerHTML += item.tagName.toLowerCase();
+  });
+};
+
+t46();
+
 // Вставка элементов через appendChild. Для решения задач данного блока вам понадобятся следующие методы: createElement, appendChild.
 // 47. Дан ol. Вставьте ему в конец li с текстом 'пункт'.
+
+function t47() {
+  let ol = document.querySelector('.out-47');
+  let z = document.createElement('li');
+  z.innerHTML = 'Пункт';
+  ol.appendChild(z);
+};
+
+let btn47 = document.querySelector('.btn-47').onclick = t47;
+
 // 48. Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+
+function t48() {
+  let out = document.querySelector('.out-48');
+  let z = ['десять', 'Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят'];
+  let btn = document.querySelector('.btn-48');
+
+  btn.onclick = function() {
+    for (let i = 0; i < z.length; i++) {
+      let x = document.createElement('li');
+      x.classList.add(`li-${i}`);
+      x.innerHTML = z[i];
+      out.appendChild(x);
+    }
+  }
+};
+
+t48();
+
 // Потомки. Для решения задач данного блока вам понадобятся следующие свойства: firstElementChild, lastElementChild, children.
 // 49. Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета.
 // 50. Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.
