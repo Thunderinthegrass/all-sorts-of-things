@@ -757,21 +757,215 @@ function t48() {
 t48();
 
 // Потомки. Для решения задач данного блока вам понадобятся следующие свойства: firstElementChild, lastElementChild, children.
+
 // 49. Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета.
+
+function t49() {
+  let out = document.querySelector('.out-49');
+  let btn = document.querySelector('.btn-49');
+  let task = document.querySelector('.task-49');
+
+  btn.onclick = () => {
+    task.firstElementChild.classList.add('red');
+  }
+};
+
+t49();
+
 // 50. Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.
+
+function t50() {
+  let out = document.querySelector('.out-50');
+  let btn = document.querySelector('.btn-50');
+  let task = document.querySelector('.task-50');
+
+  btn.onclick = () => {
+    task.lastElementChild.classList.add('text-red');
+  }
+};
+
+t50();
+
 // 51. Дан элемент #elem. Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+
+function t51() {
+  let out = document.querySelector('.out-51');
+  let btn = document.querySelector('.btn-51');
+  let task = document.querySelector('.task-51');
+
+  btn.onclick = () => {
+    for (let i = 0; i < task.children.length; i++) {
+      task.children[i].innerHTML += '!';
+    }
+  }
+};
+
+t51();
+
 // Соседи. Для решения задач данного блока вам понадобятся следующие свойства: previousElementSibling, nextElementSibling.
 // 52. Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'.
+
+function t52() {
+  let out = document.querySelector('.out-52');
+  let btn = document.querySelector('.btn-52');
+  let task = document.querySelector('.task-52');
+
+  btn.onclick = () => {
+    btn.previousElementSibling.innerHTML += '!';
+  }
+};
+
+t52();
+
 // 53. Дан элемент #elem. Найдите его соседа снизу и добавьте ему в конец текст '!'.
+
+function t53() {
+  let out = document.querySelector('.out-53');
+  let btn = document.querySelector('.btn-53');
+  let task = document.querySelector('.task-53');
+
+  btn.onclick = () => {
+    btn.nextElementSibling.innerHTML += '!';
+  }
+};
+
+t53();
+
 // 54. Дан элемент #elem. Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '!'.
+
+function t54() {
+  let out = document.querySelector('.out-54');
+  let btn = document.querySelector('.btn-54');
+  let task = document.querySelector('.task-54');
+
+  btn.onclick = () => {
+    let z = btn.nextElementSibling;
+    z.nextElementSibling.innerHTML += '!';
+  }
+};
+
+t54();
+
 // Родители. Для решения задач данного блока вам понадобятся следующие свойства: parentElement, parentNode.
 // 55. Дан элемент #elem. Найдите его родителя и покрасьте его в красный цвет.
+
+function t55() {
+  let out = document.querySelector('.out-55');
+  let btn = document.querySelector('.btn-55');
+  let task = document.querySelector('.task-55');
+
+  btn.onclick = () => {
+    btn.parentElement.classList.add('red');
+  }
+};
+
+t55();
+
 // 56. Дан элемент #elem. Найдите родителя его родителя и покрасьте его в красный цвет.
+
+function t56() {
+  let out = document.querySelector('.out-56');
+  let btn = document.querySelector('.btn-56');
+  let task = document.querySelector('.task-56');
+
+  btn.onclick = () => {
+    let z = btn.parentElement;
+    z.parentElement.classList.add('red');
+  }
+};
+
+t56();
+
 // метрики windows
 // 57. Дана кнопка. По нажатию на эту кнопку выведите высоту окна браузера.
+
+function t57() {
+  let out = document.querySelector('.out-57');
+  let btn = document.querySelector('.btn-57');
+
+  btn.onclick = () => {
+    out.innerHTML = document.documentElement.clientHeight;
+  }
+};
+
+t57();
+
 // 58. Дана кнопка. По нажатию на эту кнопку прокрутите окно браузера до самого низа.
+
+function t58() {
+  let btn = document.querySelector('.btn-58');
+
+  btn.onclick = () => {
+     let z = window.innerHeight;
+	   window.scrollBy(0, z);
+  }
+};
+
+t58();
+
 // 59. Дана кнопка. По нажатию на эту кнопку узнайте, есть ли у окна браузера вертикальная прокрутка.
+
+function t59() {
+  let btn = document.querySelector('.btn-59');
+  let out = document.querySelector('.out-59');
+
+  btn.onclick = () => {
+     let z = window.pageYOffset;
+     if (z) {
+       out.innerHTML = 'Прокрутка есть';
+     }
+     else {
+       out.innerHTML = 'Прокрутки нет';
+     }
+  }
+};
+
+t59();
+
 // объект Event
 // 60. Есть поле ввода. ниже расположен текст. при вводе символа в поле ввода он добавляется к тексту
+
+function t60(e) {
+  let out = document.querySelector('.out-60');
+  let inp = document.querySelector('.inp-60');
+
+  inp.oninput = () => {
+    inp.oninput = function() {
+    out.innerHTML = inp.value;
+  };
+  }
+};
+
+t60();
+
 // 61. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl
+
+function t61() {
+  let btn = document.querySelector('.btn-61');
+
+  btn.onclick = (e) => {
+    if (e.ctrlKey) {
+      btn.classList.toggle('red');
+    }
+  }
+};
+
+t61();
+
 // 62. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'
+
+function t62() {
+  let btn = document.querySelector('.btn-62');
+  let out = document.querySelector('.out-62');
+
+  btn.onclick = (e) => {
+    if (e.ctrlKey) {
+      out.innerHTML = 1;
+    }
+    else if (e.altKey) {
+      out.innerHTML = 2;
+    }
+  }
+};
+
+t62()
