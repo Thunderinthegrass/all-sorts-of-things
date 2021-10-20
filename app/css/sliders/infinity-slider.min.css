@@ -61,24 +61,30 @@
 
 .arrow-left {
   left: 350px;
-  border-right: 30px solid #0ae9d365;
-  border-left: 30px solid #ffffff;
-  border-top: 130px solid #ffffff;
-  border-bottom: 130px solid #ffffff;
+  border-right: 30px solid rgba(255, 255, 255, 0.59);
+  border-left: 30px solid transparent;
+  border-top: 130px solid transparent;
+  border-bottom: 130px solid transparent;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .arrow-right {
   right: 350px;
-  border-left: 30px solid #0ae9d365;
-  border-right: 30px solid #ffffff;
-  border-top: 130px solid #ffffff;
-  border-bottom: 130px solid #ffffff;
+  border-left: 30px solid rgba(255, 255, 255, 0.59);
+  border-right: 30px solid transparent;
+  border-top: 130px solid transparent;
+  border-bottom: 130px solid transparent;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.slider-current {
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
 }
