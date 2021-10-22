@@ -14,16 +14,22 @@
       background: rgba(#000000, 0.3);
     }
   }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
 }
 .wrapper{
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .complex-item{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 300px;
+  height: 300px;
   font-weight: bold;
   font-size: 55px;
   text-decoration: none;
