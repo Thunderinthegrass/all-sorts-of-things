@@ -6,6 +6,15 @@
   overflow: hidden;
 }
 
+.async .logo {
+  z-index: 10;
+}
+
+.async-header {
+  height: 100px;
+  z-index: 10;
+}
+
 .wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -38,6 +47,7 @@
   position: absolute;
   -webkit-animation: firework 6s linear forwards;
           animation: firework 6s linear forwards;
+  z-index: -1;
 }
 
 @-webkit-keyframes firework {

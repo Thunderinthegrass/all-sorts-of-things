@@ -1,6 +1,6 @@
-let timerItem = document.querySelectorAll('.timer__item');
-let arrowBtnUp = document.querySelectorAll('.arrow-btn-up');
-let arrowBtnDown = document.querySelectorAll('.arrow-btn-down');
+// let timerItem = document.querySelectorAll('.timer__item');
+// let arrowBtnUp = document.querySelectorAll('.arrow-btn-up');
+// let arrowBtnDown = document.querySelectorAll('.arrow-btn-down');
 
 // for (let i = 0; i < timerItem.length; i++) {
 
@@ -187,33 +187,212 @@ let arrowBtnDown = document.querySelectorAll('.arrow-btn-down');
 
 
 //v2---------------------------------------------------------
-let ms = document.querySelector('.mil-seconds');
-let s = document.querySelector('.seconds');
-let m = document.querySelector('.minutes');
-let h = document.querySelector('.hours');
+// let ms = document.querySelector('.mil-seconds');
+// let s = document.querySelector('.seconds');
+// let m = document.querySelector('.minutes');
+// let h = document.querySelector('.hours');
+//
+// let start = document.querySelector('.timer-start-btn');
+//
+// start.onclick = function () {
+//   let msDown = setInterval(function() {
+//     if (ms.value > 0) {
+//     ms.value = ms.value - 1;
+//     }
+//
+//   }, 10)
+//
+//   if (ms.value == 0) {
+//     let sDovn = setInterval(function() {
+//       if (s.value > 0) {
+//         s.value = s.value - 1;
+//         }
+//     }, 1000)
+//   }
+//
+//
+//   if (ms.value == 0) {
+//     s.value = s.value -1;
+//   }
+// }
 
-let start = document.querySelector('.timer-start-btn');
 
-start.onclick = function () {
-  let msDown = setInterval(function() {
-    if (ms.value > 0) {
-    ms.value = ms.value - 1;
-    }
+// v3===================================24.10.2021
+const ms = document.querySelector('.mil-seconds');
+const s = document.querySelector('.seconds');
+const m = document.querySelector('.minutes');
+const h = document.querySelector('.hours');
 
-  }, 10)
+const arrowsUp = document.querySelectorAll('.arrow-btn-up');
+const arrowsDown = document.querySelectorAll('.arrow-btn-down');
+const timerItem = document.querySelectorAll('.timer__item');
 
-  if (ms.value == 0) {
-    let sDovn = setInterval(function() {
-      if (s.value > 0) {
-        s.value = s.value - 1;
+let k = 0;
+
+function arrowsButtons() {
+  for (let i = 0; i < timerItem.length; i++) {
+    arrowsUp[i].addEventListener('click', function increase() {
+      let z = timerItem[i].value;
+      if (z == '') {
+        z = 0;
+        z = Number(z);
+      }
+      if (z >= 0) {
+        z++;
+        if (z < 10 && z >= 0) {
+          z = '0' + z;
         }
-    }, 1000)
-  }
+        timerItem[i].value = z;
+      }
+      console.log(timerItem[i].value);
+    })
 
-  
-  if (ms.value == 0) {
-    s.value = s.value -1;
+    arrowsDown[i].addEventListener('click', function decrease() {
+      let z = timerItem[i].value;
+      if (z == '') {
+        z = 0;
+        z = Number(z);
+      }
+      if (z >= 1) {
+        z = z - 1;
+        if (z < 10 && z >= 0) {
+          z = '0' + z;
+        }
+        timerItem[i].value = z;
+      }
+    })
   }
 }
 
+arrowsButtons();
 
+
+const start = document.querySelector('.timer-start-btn');
+const dis = document.querySelector('.discharge');
+
+ms.value = '00';
+s.value = '00';
+m.value = '00';
+h.value = '00';
+
+function timer() {
+  let sTime;
+  let milTimeT;
+  function timerGo() {
+    let milSecValue = Number(ms.value);
+    let sValue = Number(s.value);
+    let mValue = Number(m.value);
+    let hValue = Number(h.value);
+
+    if (mValue >= 0) {
+      if (sValue >= 0) {
+        console.log(sValue);
+        milSecValue = 100;
+        ms.value = milSecValue;
+
+        function milTime() {
+          if (milSecValue > 0) {
+              milTimeT = setTimeout(() => {
+              milSecValue = milSecValue - 1;
+              ms.value = milSecValue;
+              if (milSecValue < 10 && milSecValue >= 0) {
+                milSecValue = '0' + milSecValue;
+                ms.value = milSecValue;
+              }
+              milTime();
+            }, 10)
+          }
+        }
+        milTime();
+
+          sTime = setTimeout(() => {
+          ms.value = milSecValue;
+          sValue = sValue - 1;
+          s.value = sValue;
+          console.log(sValue);
+
+          if (sValue < 10 && sValue >= 0) {
+            sValue = '0' + sValue;
+            s.value = sValue;
+          }
+          timerGo();
+        }, 1000)
+      }
+      if (sValue == 0 && mValue > 0) {
+        setTimeout(() => {
+          s.value = 59;
+          mValue = mValue - 1;
+          m.value = mValue;
+
+          if (mValue < 10 && mValue >= 0) {
+            mValue = '0' + mValue;
+            m.value = mValue;
+          }
+          timerGo();
+        }, 1000)
+      }
+      if (sValue == -1 && mValue == 0) {
+        s.value = '0' + 0;
+      }
+    }
+  }
+
+  function timerStop() {
+    m.value = '';
+    h.value = '';
+    ms.value = '';
+    s.value = '';
+    clearTimeout(sTime);
+    clearTimeout(milTimeT);
+    m.value = '00';
+    h.value = '00';
+    ms.value = '00';
+    s.value = '00';
+  }
+
+  start.addEventListener('click', timerGo);
+  dis.addEventListener('click', timerStop);
+}
+timer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

@@ -2,6 +2,13 @@
   background: #01031f;
   background: linear-gradient(#01031f, #01031f, #010534, #030d87, #202ab0, #69a5f6);
   overflow: hidden;
+  .logo{
+    z-index: 10;
+  }
+  &-header{
+    height: 100px;
+    z-index: 10;
+  }
 }
 .wrapper{
   flex-wrap: wrap;
@@ -31,6 +38,7 @@
   border-radius: 50%;
   position: absolute;
   animation: firework 6s linear forwards;
+  z-index: -1;
 }
 @keyframes firework {
   0%{
