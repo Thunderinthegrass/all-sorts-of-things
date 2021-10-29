@@ -1,0 +1,63 @@
+.preloaders-body{
+  background: transparent;
+}
+.preloader-item{
+  height: 300px;
+  border: 1px solid #ff8888;
+  border-left: 0;
+  border-right: 0;
+}
+.circle-of-balls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__wrapper{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__ball{
+    width: 30px;
+    height: 30px;
+    background: #c1e6d6;
+    border-radius: 50%;
+    position: absolute;
+    &-1{
+      transform: rotate(36deg) translateY(-60px) rotate(-36deg);
+    }
+    &-2{
+      transform: rotate(72deg) translateY(-60px) rotate(-72deg);
+    }
+    &-3{
+      transform: rotate(108deg) translateY(-60px) rotate(-108deg);
+    }
+    &-4{
+      transform: rotate(144deg) translateY(-60px) rotate(-144deg);
+    }
+    &-5{
+      transform: rotate(180deg) translateY(-60px) rotate(-180deg);
+    }
+    &-6{
+      transform: rotate(216deg) translateY(-60px) rotate(-216deg);
+    }
+    &-7{
+      transform: rotate(252deg) translateY(-60px) rotate(-252deg);
+    }
+    &-8{
+      transform: rotate(288deg) translateY(-60px) rotate(-288deg);
+    }
+    &-9{
+      transform: rotate(324deg) translateY(-60px) rotate(-324deg);
+    }
+    &-10{
+      transform: rotate(360deg) translateY(-60px) rotate(-360deg);
+    }
+  }
+}
+.ball-active{
+  opacity: .5;
+}
