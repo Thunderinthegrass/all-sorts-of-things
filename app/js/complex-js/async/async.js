@@ -21,15 +21,14 @@ function fireworks() {
     let z = document.createElement('div');
     z.classList.add('async-elem');
     wrapper.appendChild(z);
-    console.log('vvv');
     z.style.left = `${posLeft}%`;
     z.style.top = `${posTop}%`;
     z.style.background = `rgb(${red}, ${green}, ${blue})`;
-    if (red < 255 && green < 255 && blue < 255) {
-      red++;
-      green++;
-      blue++;
-    }
+    // if (red < 255 && green < 255 && blue < 255) {
+      // red++;
+      // green++;
+      // blue++;
+    // }
   }
 
   setInterval(createElem, 1000);

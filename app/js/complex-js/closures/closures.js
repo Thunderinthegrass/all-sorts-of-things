@@ -75,6 +75,7 @@ const externalVar = 'Самая внешняя функция';
 
 
   function wrapperExample() {
+
     function createAddress(type) {
       const address = type.toUpperCase();
       return function(name) {
@@ -85,6 +86,30 @@ const externalVar = 'Самая внешняя функция';
     let z = createAddress('мистер');
 
     console.log(z('чистюля'));
+
+    function player(name) {
+      let score = 0;
+      return function() {
+        score++;
+        return `${name} - ${score} баллов`;
+      }
+    }
+
+    let player1 = player('Фёдор Петров');
+    document.querySelector('.out').onclick = function() {
+      document.querySelector('.out').innerHTML = player1();
+    }
+    let player2 = player('Владимир Пнёв');
+    document.querySelector('.out-1').onclick = function() {
+      document.querySelector('.out-1').innerHTML = player2();
+    }
+    let player3 = player('Мистер Чистюля');
+    document.querySelector('.out-2').onclick = function() {
+      document.querySelector('.out-2').innerHTML = player3();
+    }
+    console.log(player1());
+    console.log(player2());
+    console.log(player3());
   }
   wrapperExample();
 }

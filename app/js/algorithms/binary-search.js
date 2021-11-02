@@ -157,7 +157,43 @@ function search(arr, elem) {
 }
 console.log(search(arrrr, 60));
 
+function colorCode() {
+  let pre1 = document.querySelector('.t1');
+  console.log(pre1);
+  let preInner = pre1.innerHTML;
+  let preInnerArr = preInner.split(' ');
+  console.log(preInnerArr);
 
+  for (let i = 0; i < preInnerArr.length; i++) {
+    preInnerArr[i] = preInnerArr[i] + ' ';
+    let span = document.createElement('span');
+    span.classList.add('span-t1-s1');
+    span.innerHTML = preInnerArr[i];
+    document.querySelector('.t1-inner').appendChild(span);
+  }
+
+  let spanT1S1 = document.querySelectorAll('.span-t1-s1');
+  console.log(spanT1S1[0]);
+  const leT = 'let ';
+  const funC = 'function ';
+  const consT = 'const ';
+  const plus = '+ ';
+  const minus = '- ';
+  const equals = '= ';
+  spanT1S1.forEach((item) => {
+    if (item.innerHTML == consT) {
+      item.style.color = '#66d1f1';
+    }
+    if (item.innerHTML == equals) {
+      item.style.color = '#de42fd';
+    }
+    if (item.innerHTML[0] == '[') {
+      item.style.color = '#d787ff';
+    }
+  });
+
+}
+colorCode()
 
 
 
