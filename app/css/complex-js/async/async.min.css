@@ -1,4 +1,4 @@
-.async {
+.async-body {
   background: #01031f;
   background: -webkit-gradient(linear, left top, left bottom, from(#01031f), color-stop(#01031f), color-stop(#010534), color-stop(#030d87), color-stop(#202ab0), to(#69a5f6));
   background: -o-linear-gradient(#01031f, #01031f, #010534, #030d87, #202ab0, #69a5f6);
@@ -6,23 +6,35 @@
   overflow: hidden;
 }
 
-.async .logo {
+.async-body .logo {
   z-index: 10;
 }
 
-.async-header {
+.async-body-header {
   height: 100px;
   z-index: 10;
 }
 
-.wrapper {
+.async-body .wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
   height: 100vh;
 }
 
-.btn {
+.async-body p {
+  color: #aca4a4;
+  line-height: 25px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.async-body strong {
+  color: #fff;
+}
+
+.async-body .btn {
+  display: inline-block;
   color: #fff;
   padding: 10px;
   background: #57d467;
@@ -32,7 +44,7 @@
   z-index: 1;
 }
 
-.async-title {
+.async-body .async-title {
   color: #9de047;
   font-size: 25px;
   font-weight: bold;
@@ -40,7 +52,7 @@
   text-align: center;
 }
 
-.async-elem {
+.async-body .async-elem {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -82,4 +94,11 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+}
+
+.async-body .counter {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background: #fff;
 }
