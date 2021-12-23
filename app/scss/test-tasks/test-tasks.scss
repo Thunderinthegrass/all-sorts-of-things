@@ -1,0 +1,11 @@
+.container{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.test-tasks{
+  &__menu-link{
+    color: #fff;
+    text-decoration: none;
+  }
+}

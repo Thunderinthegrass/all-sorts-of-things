@@ -21,12 +21,24 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
+.complex-js-body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .complex-item {
@@ -39,7 +51,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25%;
+  width: 300px;
+  height: 300px;
   font-weight: bold;
   font-size: 55px;
   text-decoration: none;

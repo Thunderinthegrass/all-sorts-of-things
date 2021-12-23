@@ -11,3 +11,11 @@ h3 {
 .wrapper {
   height: 100vh;
 }
+
+.promise-out {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  color: #105717;
+  font-weight: bold;
+}
