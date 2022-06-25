@@ -1,13 +1,23 @@
 .promise-body{
   background: #fff;
+  .documentation-link{
+    color: rgb(31, 43, 39);
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .link-wrapper{
+    display: inline-block;
+  }
 }
 h3{
   text-align: center;
-  color: #6adbb6;
+  color: #739c9c;
   font-size: 25px;
 }
 .wrapper{
-  height: 100vh;
+  height: 100px;
 }
 .promise-out{
   text-align: center;
@@ -15,4 +25,7 @@ h3{
   font-size: 30px;
   color: #105717;
   font-weight: bold;
+}
+.out-promise{
+  border: 1px solid #000;
 }

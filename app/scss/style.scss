@@ -5,8 +5,14 @@
 @import "fonts";
 @import "global";
 @import "animation";
+@import "complex-js/promise/promise.scss";
+@import "complex-js/constructor/constructor.scss";
+@import "complex-js/complex-js";
+@import "components/components";
 
-
+.home-page{
+  background: #21212C;
+}
 .header__menu{
   padding: 30px;
   padding-top: 0;

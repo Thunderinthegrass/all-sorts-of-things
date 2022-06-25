@@ -11,6 +11,11 @@ $arg-color: #c7ab0a;
   margin: 0;
   padding: 0;
 }
+.to-main{
+  text-decoration: none;
+  color: #807979;
+  font-weight: 600;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -23,9 +28,26 @@ $arg-color: #c7ab0a;
   color: rgb(66, 62, 70);
   text-align: center;
 }
+.main-nav{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  &__item{
+    margin: 0 10px;
+  }
+  a{
+    color: #7c7474;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
 h2 {
   color: rgb(66, 62, 70);
   text-align: center;
+  margin-bottom: 20px;
 }
 h3 {
   width: 200px;
@@ -39,8 +61,10 @@ h3 {
   padding-left: 30px;
   position: relative;
 }
-p {
+.task-text {
   color: rgb(62, 69, 70);
+  margin: 10px 0;
+
 }
 input {
   margin: 10px;

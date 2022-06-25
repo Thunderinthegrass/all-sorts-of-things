@@ -20,12 +20,15 @@
   </div>
   <div class="container">
     <h1 class="main-title">Задачник Абрамяна на JS</h1>
+    <ul class="main-nav">
+      <li class="main-nav__item"><a href="matrix.html">matrix</a></li>
+    </ul>
     <section class="begin">
       <h2>Begin1 - Begin40. Ввод и вывод данных, оператор присваивания</h2>
 
       <div class="task task-1">
         <h3>Задание 1</h3>
-        <p>Дано расстояние L в сантиметрах. Используя операцию деления
+        <p class="task-text">Дано расстояние L в сантиметрах. Используя операцию деления
           нацело, найти количество полных метров в нем (1 метр = 100 см).</p>
         <input type="text" class="inp inp-1" placeholder="Введите расстояние">
         <button class="btn btn-1">Жмяк</button>
@@ -41,18 +44,18 @@
   <span class="comment-color">4</span>     <span class="func-color">let</span> a <span class="oper-color">=</span> <span class="func-color">Math.floor</span>(v <span class="oper-color">/</span> <span class="num-color">100</span>);
   <span class="comment-color">5</span>     out[<span class="num-color">0</span>].innerHTML <span class="oper-color">=</span> <span class="str-color">'В '</span> <span class="oper-color">+</span> v <span class="oper-color">+</span> <span class="str-color">' сантиметрах '</span> <span class="oper-color">+</span> a <span class="oper-color">+</span> <span class="str-color">' полных метров';</span>
   <span class="comment-color">6</span>   }
-  <span class="comment-color">7</span> 
-  <span class="comment-color">8</span> 
+  <span class="comment-color">7</span>
+  <span class="comment-color">8</span>
   <span class="comment-color">9</span>   <span class="comment-color">//способ второй</span>
  <span class="comment-color">10</span>  <span class="func-color">function</span> <span class="ev-color">t1</span>(<span class="arg-color">val</span>) {
  <span class="comment-color">11</span>    <span class="func-color">let</span> v <span class="oper-color">=</span> inp[<span class="num-color">0</span>].value;
  <span class="comment-color">12</span>    <span class="oper-color">return</span> <span class="str-color">`В ${v} сантиметрах ${(val</span> <span class="oper-color">-</span> <span class="str-color">val</span> <span class="oper-color">%</span> <span class="num-color">100</span>) <span class="oper-color">/</span> <span class="num-color">100</span><span class="var-color">}</span> <span class="str-color">полных метра(ов)`</span>
  <span class="comment-color">13</span>  }
- <span class="comment-color">14</span> 
+ <span class="comment-color">14</span>
  <span class="comment-color">15</span>  btn[<span class="num-color">0</span>].onclick <span class="oper-color">=</span> () <span class="func-color">=></span> {
  <span class="comment-color">16</span>    <span class="func-color">let</span> v <span class="oper-color">=</span> inp[<span class="num-color">0</span>].value;
  <span class="comment-color">17</span>    out[<span class="num-color">0</span>].innerHTML <span class="oper-color">=</span> <span class="ev-color">t1</span>(v);
- <span class="comment-color">18</span>  }         
+ <span class="comment-color">18</span>  }
     </span>
 </pre>
         </div>
@@ -60,7 +63,7 @@
 
       <div class="task task-2">
         <h3>Задание 2</h3>
-        <p>Дана сторона квадрата a. Найти его площадь S = a<sup>2</sup> .</p>
+        <p class="task-text">Дана сторона квадрата a. Найти его площадь S = a<sup>2</sup> .</p>
         <input type="text" class="inp inp-2" placeholder="Введите длину стороны">
         <button class="btn btn-2">Жмяк</button>
         <div class="out out-2"></div>
@@ -74,10 +77,10 @@
               v = v * v;
               return `Площадь квадрата равна ${v}`;
             }
-            
+
             btn[1].onclick = () => {
               out[1].innerHTML = t2();
-            }         
+            }
     </span>
 </pre>
         </div>
@@ -85,7 +88,7 @@
 
       <div class="task task-3">
         <h3>Задание 3</h3>
-        <p>Даны стороны прямоугольника a и b. Найти его площадь S = a · b и периметр P = 2 · (a + b).</p>
+        <p class="task-text">Даны стороны прямоугольника a и b. Найти его площадь S = a · b и периметр P = 2 · (a + b).</p>
         <input type="text" class="inp inp-3" placeholder="Введите длину стороны a">
         <input type="text" class="inp inp-3" placeholder="Введите длину стороны b">
         <button class="btn btn-3">Жмяк</button>
@@ -94,7 +97,7 @@
 
       <div class="task task-4">
         <h3>Задание 4</h3>
-        <p>Дан диаметр окружности d. Найти ее длину L = π · d. В качестве
+        <p class="task-text">Дан диаметр окружности d. Найти ее длину L = π · d. В качестве
           значения ј использовать 3.14.</p>
         <input type="text" class="inp inp-4" placeholder="Введите d">
         <button class="btn btn-4">Жмяк</button>
@@ -145,7 +148,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="../../js/abramyan/main.js"></script>
+  <script src="../../js/abramyan/abramyan.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+.constructor-body{
+  .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: all .3s;
+    a{
+      color: #000;
+    }
+    &:hover{
+      background: rgba(#000000, 0.3);
+    }
+  }
+}

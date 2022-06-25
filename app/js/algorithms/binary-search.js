@@ -159,10 +159,13 @@ console.log(search(arrrr, 60));
 
 function colorCode() {
   let pre1 = document.querySelector('.t1');
-  console.log(pre1);
+  // console.log(pre1);
   let preInner = pre1.innerHTML;
   let preInnerArr = preInner.split(' ');
-  console.log(preInnerArr);
+  let preInnerBrackets = preInner.split('');
+
+  // console.log(preInnerArr);
+  // console.log(preInnerBrackets);
 
   for (let i = 0; i < preInnerArr.length; i++) {
     preInnerArr[i] = preInnerArr[i] + ' ';
@@ -173,24 +176,30 @@ function colorCode() {
   }
 
   let spanT1S1 = document.querySelectorAll('.span-t1-s1');
-  console.log(spanT1S1[0]);
+  // console.log(spanT1S1[0]);
   const leT = 'let ';
   const funC = 'function ';
   const consT = 'const ';
   const plus = '+ ';
   const minus = '- ';
   const equals = '= ';
+  const brackets = ';'
+  const foR = 'for ';
   spanT1S1.forEach((item) => {
     if (item.innerHTML == consT) {
       item.style.color = '#66d1f1';
     }
-    if (item.innerHTML == equals) {
+    // if (item.innerHTML == equals) {
+    //   item.style.color = '#de42fd';
+    // }
+    // if (item.innerHTML[0] == '[') {
+    //   item.style.color = '#d787ff';
+    // }
+    if (item.innerHTML == foR) {
       item.style.color = '#de42fd';
     }
-    if (item.innerHTML[0] == '[') {
-      item.style.color = '#d787ff';
-    }
   });
+
 
 }
 colorCode()

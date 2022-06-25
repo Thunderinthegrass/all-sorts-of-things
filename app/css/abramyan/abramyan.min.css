@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.to-main {
+  text-decoration: none;
+  color: #807979;
+  font-weight: 600;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -19,9 +25,35 @@
   text-align: center;
 }
 
+.main-nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+
+.main-nav__item {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  color: #7c7474;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 h2 {
   color: #423e46;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -38,8 +70,9 @@ h3 {
   position: relative;
 }
 
-p {
+.task-text {
   color: #3e4546;
+  margin: 10px 0;
 }
 
 input {
